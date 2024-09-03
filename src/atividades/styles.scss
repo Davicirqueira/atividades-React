@@ -1,11 +1,14 @@
 @import '../../colors.scss';
 
 .pagina-atividade {
+
+    height: 130vh;
+
     .cards {
 
         display: flex;
         gap: 25px;
-        padding: 80px 120px;
+        padding: 1px 120px 40px;
 
 
         .card {
