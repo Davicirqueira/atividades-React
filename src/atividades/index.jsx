@@ -2,6 +2,7 @@ import './index.scss';
 import './styles.scss'
 import Cabecalho from '../components/header';
 import Card from '../components/card';
+import Footer from '../components/footer'
 
 //const itens = {
 
@@ -81,6 +82,8 @@ export default function Atividade() {
         />
 
       </div>
+
+      <Footer/>
 
     </div>
 
