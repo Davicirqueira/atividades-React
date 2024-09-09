@@ -2,20 +2,39 @@ import './index.scss';
 import './styles.scss'
 import Cabecalho from '../components/header';
 import Card from '../components/card';
-import Footer from '../components/footer'
 
-//const itens = {
-
-// corPrimaria = '#A3E5BA'
-// corSegundaria = '#EFFBE2'
-// titulo = 'Componentes'
-// subtitulo = 'Assuntos'
-// texto = '- Objetos e Listas de Objetos\n- Componentes'
-// data = '26/agosto'
-
-//}
 
 export default function Atividade() {
+
+  let cards = [
+
+    {
+
+      titulo: 'Componentes',
+      subtitulo: 'Assuntos',
+      assunto: '- Objetos e Listas de Objetos\n- Componentes',
+      status: 'Completo',
+      data: '26/agosto',
+      temData: true,
+      entregaTrab: false
+
+    },
+
+    {
+
+      titulo: 'Componentes',
+      subtitulo: 'Assuntos',
+      assunto: '- Objetos e Listas de Objetos\n- Componentes',
+      status: 'Em andamento',
+      data: '26/agosto',
+      temData: true,
+      entregaTrab: false
+
+    }
+
+  ]
+
+
 
   return (
     <div className="pagina-atividade">
@@ -26,47 +45,49 @@ export default function Atividade() {
 
       <div className='cards'>
 
-        <Card
-          corPrimaria={'#A3E5BA'}
-          corSegundaria={'#EFFBE2'}
-          titulo={'Componentes'}
-          subtitulo={'Assuntos'}
-          texto={'- Objetos e Listas de Objetos\n- Componentes'}
-          data={'26/agosto'}
-          temData={true}
-          trabalho={false}
-        />
+        {
+          cards.map(c => 
+
+            <Card
+              titulo={c.titulo}
+              subtitulo={c.subtitulo}
+              assunto={c.assunto}
+              status={c.status}
+              data={c.data}
+              temData={c.temData}
+              trabalho={c.entregaTrab}
+            />
+
+          )
+
+        }
 
         <Card
-          corPrimaria={'#DCA3E5'}
-          corSegundaria={'#EDE2FB'}
+          status={'Em andamento'}
           titulo={'Renderização e Efeito'}
           subtitulo={'Assuntos'}
-          texto={'- Componentes de Renderização'}
+          assuntos={'- Componentes de Renderização'}
           data={'26/setembro'}
           temData={true}
-          trabalho={false} />
+          entregaTrab={false} />
 
         <Card
-          corPrimaria={'#C3C3C3'}
-          corSegundaria={'#F2F2F2'}
           titulo={'Consumindo APIs - Parte 1'}
           subtitulo={'Assuntos'}
-          texto={'- Componentes de Renderização'}
+          assuntos={'- Componentes de Renderização'}
           data={'9/setembro'}
           temData={true}
-          trabalho={true} />
+          entregaTrab={true} />
 
       </div>
 
       <div className='cards'>
 
         <Card
-          corPrimaria={'#F6E448'}
-          corSegundaria={'#FAF4C1'}
+          status={'Evento'}
           titulo={'Prova Prática e Teórica'}
           subtitulo={'Assuntos'}
-          texto={` - Criando um projeto React
+          assuntos={` - Criando um projeto React
  - Estilização com SCSS
  - Navegação entre telas
  - Variáveis de estado 
@@ -74,16 +95,15 @@ export default function Atividade() {
  - Componentes`}
           data={'16/setembro'}
           temData={true}
-          trabalho={false} />
+          entregaTrab={false} />
 
         <Card
+          status={'ND'}
           temData={false}
           titulo={'Fim do\n terceiro bimestre'}
         />
 
       </div>
-
-      <Footer/>
 
     </div>
 
