@@ -13,6 +13,8 @@ export default function PaginaErro() {
 
             <img className='err' src="/assets/images/image.png" alt="" />
 
+            <footer> &bnsp; </footer>
+
         </div>
 
     );

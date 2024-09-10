@@ -22,11 +22,34 @@ export default function Atividade() {
 
     {
 
-      titulo: 'Componentes',
+      titulo: 'Renerização e Efeito',
       subtitulo: 'Assuntos',
-      assunto: '- Objetos e Listas de Objetos\n- Componentes',
+      assunto: 'Componentes na renderização',
       status: 'Em andamento',
-      data: '26/agosto',
+      data: '2/setembro',
+      temData: true,
+      entregaTrab: false
+
+    },
+
+    {
+
+      titulo: 'Consumindo APIs - Parte 1',
+      subtitulo: 'Assuntos',
+      assunto: 'Componentes na renderização',
+      data: '9/setembro',
+      temData: true,
+      entregaTrab: true
+
+    },
+    
+    {
+
+      titulo: 'Prova Teórica e Prática',
+      subtitulo: 'Assuntos',
+      assunto: '- Criando um projeto React\n- Estilização com SCSS\n- Navegação entre telas\n- Variáveis de estado\n- Renderização de lista\n- Componentes',
+      status: 'Evento',
+      data: '16/setembro',
       temData: true,
       entregaTrab: false
 
@@ -55,55 +78,16 @@ export default function Atividade() {
               status={c.status}
               data={c.data}
               temData={c.temData}
-              trabalho={c.entregaTrab}
+              entregaTrab={c.entregaTrab}
             />
 
           )
 
         }
 
-        <Card
-          status={'Em andamento'}
-          titulo={'Renderização e Efeito'}
-          subtitulo={'Assuntos'}
-          assuntos={'- Componentes de Renderização'}
-          data={'26/setembro'}
-          temData={true}
-          entregaTrab={false} />
-
-        <Card
-          titulo={'Consumindo APIs - Parte 1'}
-          subtitulo={'Assuntos'}
-          assuntos={'- Componentes de Renderização'}
-          data={'9/setembro'}
-          temData={true}
-          entregaTrab={true} />
-
       </div>
 
-      <div className='cards'>
-
-        <Card
-          status={'Evento'}
-          titulo={'Prova Prática e Teórica'}
-          subtitulo={'Assuntos'}
-          assuntos={` - Criando um projeto React
- - Estilização com SCSS
- - Navegação entre telas
- - Variáveis de estado 
- - Renderização de lista 
- - Componentes`}
-          data={'16/setembro'}
-          temData={true}
-          entregaTrab={false} />
-
-        <Card
-          status={'ND'}
-          temData={false}
-          titulo={'Fim do\n terceiro bimestre'}
-        />
-
-      </div>
+      <footer> &bnsp; </footer>
 
     </div>
 
