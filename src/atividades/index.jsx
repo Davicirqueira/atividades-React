@@ -28,6 +28,17 @@ export default function Atividade() {
     }
 
   }
+
+  function f5(e){
+
+    if(e.key == 'f5'){
+
+      listarCards();
+
+    }
+
+  }
+
   // let cards = [
 
   //   {
@@ -80,7 +91,7 @@ export default function Atividade() {
   // ]
 
   return (
-    <div className="pagina-atividade">
+    <div className="pagina-atividade" onKeyUp={f5}>
 
       <Cabecalho />
 
