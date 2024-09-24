@@ -1,5 +1,5 @@
-import './index.scss';
-import Cabecalho from '../components/header';
+import './index.scss'
+//uma página de erros 
 
 export default function PaginaErro() {
 
@@ -7,13 +7,8 @@ export default function PaginaErro() {
 
         <div className='pagina-erro'>
 
-            <Cabecalho />
-
-            <h1>Conteúdos</h1>
-
+            
             <img className='err' src="/assets/images/image.png" alt="" />
-
-            <footer> &bnsp; </footer>
 
         </div>
 

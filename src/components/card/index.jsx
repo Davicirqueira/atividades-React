@@ -1,6 +1,6 @@
 import './index.scss'
 
-export default function Card({ status, titulo, subtitulo, assunto, data, temData, entregaTrab }) {
+export default function Card({ titulo, subtitulo, assuntos, data, status, entregaTrab }) {
 
   let corPrimaria = ''
   let corSegundaria = ''
@@ -40,15 +40,13 @@ export default function Card({ status, titulo, subtitulo, assunto, data, temData
         <h2>{titulo}</h2>
       </div>
       <div className='card-conteudo'>
-        <h3>{subtitulo}</h3>
+        <h3>{subtitulo} </h3>
         <pre>
-          {assunto}
+          {assuntos}
         </pre>
       </div>
-
-      {
-        temData && <p className='tag'>{data}</p>
-      }
+    
+      <p className='tag'>{data}</p>
 
       {
         entregaTrab && <p className='tag'>Entrega Trab.</p>
